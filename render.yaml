@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: telegram-video-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    autoDeployTrigger: commit
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
